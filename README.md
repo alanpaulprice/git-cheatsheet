@@ -22,7 +22,7 @@ remove a file from the staging area
 ```
 git rm --cached <filename>
 ```
-store staged changes. ```-a``` will auto remove deleted files (can be added adjacent to the ```-m```, as ```-am```
+store staged changes. ```-a``` will auto remove deleted files. it can be added adjacent to the ```-m```, as ```-am```
 ```
 git commit -m "<description-of-changes>"
 ```
