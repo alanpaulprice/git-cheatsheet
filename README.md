@@ -10,10 +10,6 @@ add file to staging area, ready for committing
 ```
 git add <filename>
 ```
-remove a file from the staging area
-```
-git rm --cached <filename>
-```
 store staged changes. ```-a``` will auto remove deleted files (it can be added adjacent to the ```-m```, as ```-am```)
 ```
 git commit -m "<description-of-changes>"
@@ -41,6 +37,10 @@ git diff <commit>
 unstage a file
 ```
 git reset <filename>
+```
+stage a file for removal
+```
+git rm --cached <filename>
 ```
 reset changes to the specified file, since the last commit. ```--``` specifies that there are no more options after it. avoids potential confusion between the names of branches and files
 ```
