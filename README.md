@@ -32,7 +32,7 @@ git diff <commit>
 ### committing
 store staged changes. ```-a``` will auto remove deleted files (it can be included adjacent to the ```-m```, as ```-am```)
 ```
-git commit -m "<description-of-changes>"
+git commit -m '<description-of-changes>'
 ```
 view a list of previous commits. include ```--oneline``` to condense each item to a single line
 ```
