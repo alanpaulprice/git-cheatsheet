@@ -66,7 +66,16 @@ removes specified file from disk and stages their removal. ```<*.<file-extension
 ```
 git rm <filename>
 ```
+merges the changes of the specified branch into the current branch. conflicts may occur, [vist here](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented) to about dealing with them
+```
+git merge <branch-name>
+```
+delete a branch. if the changes on the branch haven't been merged, ```-D``` (combines ```-d``` and ```-f```) will be required to delete it
+```
+git branch -d <branch-name>
+```
 ___
 
 ### HEAD
 The HEAD is a pointer that holds your position within all your different commits. By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA.
+### [GIT PRO BOOK](https://git-scm.com/book/en/v2)
