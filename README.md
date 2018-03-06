@@ -22,6 +22,10 @@ remove a specified file from disk and stage it's removal. ```-r``` (recursive) c
 ```
 git rm <filename>
 ```
+display what is different between the current files and those of the specified commmit. if ```<commit>``` is omitted, the most recent commit will be used. specifying ```HEAD``` will show the result between the pulled changes and the current position. ```git diff --staged``` displays the current changes that are staged. pressing ```q``` will exit the results.
+```
+git diff <commit>
+```
 
 ---
 
@@ -34,11 +38,6 @@ view a list of previous commits. include ```--oneline``` to condense each item t
 ```
 git log
 ```
-display what is different between the current files and those of the specified commmit. if ```<commit>``` is omitted, the last commit will be used. specifying ```HEAD``` will show the result between the pulled changes and the current position. ```git diff --staged``` displays the current changes that are staged. pressing ```q``` will exit the results.
-```
-git diff <commit>
-```
-
 ---
 
 ### branches
