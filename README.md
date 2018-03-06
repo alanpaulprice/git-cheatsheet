@@ -10,7 +10,7 @@ add file to staging area, ready for committing
 ```
 git add <filename>
 ```
-store staged changes. ```-a``` will auto remove deleted files (it can be added adjacent to the ```-m```, as ```-am```)
+store staged changes. ```-a``` will auto remove deleted files (it can be included adjacent to the ```-m```, as ```-am```)
 ```
 git commit -m "<description-of-changes>"
 ```
@@ -30,7 +30,7 @@ check for changes to the remote repo and (if any exist) pull them down/update th
 ```
 git pull origin master
 ```
-display what is different between the current files and those of the specified commmit. if ```<commit>``` is omitted, the last commit will be used. pressing ```q``` will exit the results. specifying ```HEAD``` will show the result between the pulled changes and the current position. ```git diff --staged``` displays the current changes that are staged
+display what is different between the current files and those of the specified commmit. if ```<commit>``` is omitted, the last commit will be used. specifying ```HEAD``` will show the result between the pulled changes and the current position. ```git diff --staged``` displays the current changes that are staged. pressing ```q``` will exit the results.
 ```
 git diff <commit>
 ```
@@ -42,27 +42,27 @@ stage a file for removal
 ```
 git rm --cached <filename>
 ```
-reset changes to the specified file, since the last commit. ```--``` specifies that there are no more options after it. avoids potential confusion between the names of branches and files
+reset uncommitted changes to a specified file, since the last commit. ```--``` specifies that there are no more options after it, which avoids potential confusion between the names of branches and files
 ```
 git checkout -- <filename>
 ```
-create a new branch. if the ```<branch-name>``` is omitted, the current existing branches will be listed
+create a new branch. if ```<branch-name>``` is omitted, a list of the current branches will be returned
 ```
 git branch <branch-name>
 ```
-switch branches. including ```-b``` will create a new branch and switch to it simulatenously.
+switch branches. including ```-b``` will create a new branch and switch to it
 ```
 git checkout <branch-name>
 ```
-removes specified file from disk and stages their removal. ```<*.<file-extension>``` can be used to remove all files of a type. ```-r``` (recursive) can be used to remove a folder
+remove a specified file from disk and stage it's removal. ```-r``` (recursive) can be used to remove a folder
 ```
 git rm <filename>
 ```
-merges the changes of the specified branch into the current branch. conflicts may occur, [vist here](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented) to about dealing with them
+merge the changes made on the specified branch into the current branch. conflicts may occur, [vist here](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented) to learn about dealing with them
 ```
 git merge <branch-name>
 ```
-delete a branch. if the changes on the branch haven't been merged, ```-D``` (combines ```-d``` and ```-f```) will be required to delete it
+delete a branch. if the changes on the branch haven't been merged, ```-D``` (combines ```-d``` and ```-f```) will be required to delete it (overrides the safety feature)
 ```
 git branch -d <branch-name>
 ```
