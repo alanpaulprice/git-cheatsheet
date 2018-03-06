@@ -5,6 +5,7 @@ git init
 
 ---
 
+### staging
 view current state of project
 ```
 git status
@@ -17,17 +18,14 @@ unstage a file
 ```
 git reset <filename>
 ```
-stage a file for removal
-```
-git rm --cached <filename>
-```
-remove a specified file from disk and stage it's removal. ```-r``` (recursive) can be used to remove a folder
+remove a specified file from disk and stage it's removal. ```-r``` (recursive) can be used to remove a folder. ```--cached``` will stage the file for removal but won't remove it from disk
 ```
 git rm <filename>
 ```
 
 ---
 
+### committing
 store staged changes. ```-a``` will auto remove deleted files (it can be included adjacent to the ```-m```, as ```-am```)
 ```
 git commit -m "<description-of-changes>"
@@ -41,9 +39,29 @@ display what is different between the current files and those of the specified c
 git diff <commit>
 ```
 
+---
+
+### branches
+create a new branch. if ```<branch-name>``` is omitted, a list of the current branches will be returned
+```
+git branch <branch-name>
+```
+switch branches. including ```-b``` will create a new branch and switch to it
+```
+git checkout <branch-name>
+```
+merge the changes made on the specified branch into the current branch. conflicts may occur, [vist here](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented) to learn about dealing with them
+```
+git merge <branch-name>
+```
+delete a branch. if the changes on the branch haven't been merged, ```-D``` (combines ```-d``` and ```-f```) will be required to delete it (overrides the safety feature)
+```
+git branch -d <branch-name>
+```
 
 ---
 
+### remote
 add a remote repository, allowing local changes to be pushed to github. naming the remote ```origin``` is standard practice
 ```
 git remote add origin <repo-url>
@@ -63,25 +81,8 @@ git checkout -- <filename>
 
 ---
 
-create a new branch. if ```<branch-name>``` is omitted, a list of the current branches will be returned
-```
-git branch <branch-name>
-```
-switch branches. including ```-b``` will create a new branch and switch to it
-```
-git checkout <branch-name>
-```
-merge the changes made on the specified branch into the current branch. conflicts may occur, [vist here](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented) to learn about dealing with them
-```
-git merge <branch-name>
-```
-delete a branch. if the changes on the branch haven't been merged, ```-D``` (combines ```-d``` and ```-f```) will be required to delete it (overrides the safety feature)
-```
-git branch -d <branch-name>
-```
-___
-
+### misc
 __note:__ ```<filename>``` can be replaced with ```.``` to refer all files or ```*.<file-extension>``` to refer to all files of a specified type
 
 __The HEAD__ is a pointer that holds your position within all your different commits. By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA.
-### [GIT PRO BOOK](https://git-scm.com/book/en/v2)
+### [git pro book](https://git-scm.com/book/en/v2)
