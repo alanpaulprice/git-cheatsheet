@@ -31,6 +31,13 @@ unstage a file
 ---
 
 ```
+git add . && git reset --hard HEAD
+```
+reset repo to latest commit (also deletes any files that were created)
+
+---
+
+```
 git rm <filename>
 ```
 remove a specified file from disk and stage it's removal. ```-r``` (recursive) can be used to remove a folder. ```--cached``` will stage the file for removal but won't remove it from disk
