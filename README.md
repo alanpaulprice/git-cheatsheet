@@ -89,6 +89,13 @@ git log
 view a list of previous commits. include ```--oneline``` to condense each item to a single line
 
 ---
+
+```
+git reflog
+```
+logs all activity, includes branch changes, resets, commits, cherry picks and ammendments
+
+---
 ---
 ---
 ### branches
