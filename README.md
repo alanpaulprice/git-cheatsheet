@@ -84,6 +84,13 @@ edit the last commit. if ```-m "<new message>"``` is passed, the message will be
 ---
 
 ```
+git rever <commit id>
+```
+makes a new commit, undoing the changes of the ```<commit id>```. useful for undoing commits that have already been accessed by others remotely
+
+---
+
+```
 git log
 ```
 view a list of previous commits. include ```--oneline``` to condense each item to a single line
