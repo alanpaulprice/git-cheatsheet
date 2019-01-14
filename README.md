@@ -102,6 +102,13 @@ merge the changes made on the specified branch into the current branch. conflict
 ---
 
 ```
+git cherry-pick <commit id> 
+```
+copies a commit from a branch to the current branch
+
+---
+
+```
 git branch -d <branch-name>
 ```
 delete a branch. if the changes on the branch haven't been merged, ```-D``` (combines ```-d``` and ```-f```) will be required to delete it (overrides the safety feature)
