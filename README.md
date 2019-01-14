@@ -63,6 +63,13 @@ store staged changes. ```-a``` will auto remove deleted files (it can be include
 ---
 
 ```
+git commit --amend -m "<new message>"
+```
+edit the message of the last commit
+
+---
+
+```
 git log
 ```
 view a list of previous commits. include ```--oneline``` to condense each item to a single line
