@@ -31,6 +31,13 @@ unstage a file
 ---
 
 ```
+git reset <commit id>
+```
+resets to a previous commit. if no argument is provided, the default behaviour is ```--mixed```, which will keep changes (unstaged). ```--soft``` will keep the changes (staged). ```--hard``` will revert all (tracked) files to their state at the specified commit.  
+
+---
+
+```
 git add . && git reset --hard HEAD
 ```
 reset repo to latest commit (also deletes any files that were created)
@@ -48,6 +55,13 @@ remove a specified file from disk and stage it's removal. ```-r``` (recursive) c
 git diff <commit>
 ```
 display what is different between the current files and those of the specified commmit. if ```<commit>``` is omitted, the most recent commit will be used. specifying ```HEAD``` will show the result between the pulled changes and the current position. ```git diff --staged``` displays the current changes that are staged. pressing ```q``` will exit the results.
+
+---
+
+```
+git clean -df
+```
+removes untracked files. ```-d``` also removes untracked directories. ```-f``` is required to make git delete files
 
 ---
 ---
