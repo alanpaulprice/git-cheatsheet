@@ -63,9 +63,9 @@ store staged changes. ```-a``` will auto remove deleted files (it can be include
 ---
 
 ```
-git commit --amend -m "<new message>"
+git commit --amend
 ```
-edit the message of the last commit
+edit the last commit. if ```-m "<new message>"``` is passed, the message will be edited. if any files are staged when ammending, they will be added to the last commit.
 
 ---
 
